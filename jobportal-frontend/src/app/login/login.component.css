@@ -1,0 +1,29 @@
+body{
+    background-color: #FEF2F1;
+  }
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.mat-form-field{
+
+    width: 100%;
+}
+.example-section {
+  margin: 12px 0;
+}
+.card{
+  padding-left: 500px;
+  padding-top: 60px;
+
+}
+.example-card {
+  max-width: 500px;
+}
+p{
+color: blue;
+text-align-last: center;
+}
+ 
+
+  
+  

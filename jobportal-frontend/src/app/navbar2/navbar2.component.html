@@ -1,0 +1,13 @@
+<div>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>group</mat-icon>
+      </button>
+      <span>Online Job Portal</span>
+      <button [routerLink]="['/appliedjobs']" mat-raised-button color="accent" style="margin: 5px;">Applied Jobs</button>
+      <button  [routerLink]="['/applyjobs']" mat-raised-button color="accent" style="margin: 5px;">View Jobs</button>
+      <span class="example-spacer"></span>
+      <button (click)="logout()" mat-raised-button color="warn" style="margin: 5px;">Logout</button>
+    </mat-toolbar>
+  </div>
+<router-outlet></router-outlet>

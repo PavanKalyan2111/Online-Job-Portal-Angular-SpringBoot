@@ -1,0 +1,47 @@
+<div class="container">
+  <app-navbar></app-navbar>
+    <div class="card">
+        <form [formGroup]="signupForm">
+        <mat-card class="example-card">
+            <h1 style="text-align: center;">Signup Page</h1>
+            <p style="color: blue; text-align: center;">Enter all the required fields to register with us</p>
+            <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input formControlName="username" matInput placeholder="Enter Username">
+                <span style="color: red;" *ngIf="signupForm.controls['username'].dirty 
+                && signupForm.hasError('required','password')">Username Is Required</span>
+                <mat-icon matSuffix>account_circle</mat-icon>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput placeholder="Enter Email-Id">
+                <span style="color: red;" *ngIf="signupForm.controls['email'].dirty
+                 && signupForm.hasError('required','email')">Email-Id Is Required</span>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input formControlName="mobile" matInput placeholder="Enter Mobile Number">
+                <span style="color: red;" *ngIf="signupForm.controls['mobile'].dirty 
+                && signupForm.hasError('required','mobile')">Mobile Number Is Required</span>
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" placeholder="Enter Password" matInput [type]="hide ? 'password' : 'text'">
+                <span style="color: red;" *ngIf="signupForm.controls['password'].dirty 
+                && signupForm.hasError('required','password')">Password Is Required</span>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <button mat-raised-button color="primary"  [disabled]="!signupForm.valid" (click)="signup()">Signup</button> 
+              <br>
+              <br>
+             Already a user? Click Here to <a routerLink="/login" style="color: blue;"> Login</a>
+          </mat-card>
+        </form>
+    </div>
+
+</div>

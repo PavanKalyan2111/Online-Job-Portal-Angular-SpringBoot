@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Add Job Details</h1>
+<div mat-dialog-content>
+    <form [formGroup]="jobForm">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Job Position</mat-label>
+        <input formControlName="position" matInput placeholder="position name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Company Name</mat-label>
+        <input formControlName="companyname" matInput placeholder="compnay name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Job Role</mat-label>
+        <input formControlName="role" matInput placeholder="job role">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Salary</mat-label>
+        <input formControlName="salary" matInput placeholder="Salary">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Job Location</mat-label>
+        <input formControlName="location" matInput placeholder="job location">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Skills Required</mat-label>
+        <input formControlName="skillsrequired" matInput placeholder="Skills Required">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Job Criteria</mat-label>
+        <input formControlName="criteria" matInput type="text" placeholder="criteria">
+    </mat-form-field>
+    
+</form>
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="addJob()">{{actionBtn}}</button>
+    <button mat-raised-button mat-dialog-close color="warn">Close</button>
+</div>
